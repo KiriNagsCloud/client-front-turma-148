@@ -40,7 +40,8 @@ function App() {
 
       <div className={style.wrapImg}>
       <div className={style.degrade}></div>
-
+      <div className={style.userCard}></div>
+      
     </div>
       <div className={style.wrapForm}>
         <form onSubmit={handleLogin}>
@@ -48,6 +49,7 @@ function App() {
           <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
           <input type="password" placeholder="Senha" value={password} onChange={(e) => setPassword(e.target.value)} required/>
         <button type='submit'>Entrar</button>
+        <p>Cadastrar Usuario</p>
         <p>{message}</p>
         </form>
       </div>
