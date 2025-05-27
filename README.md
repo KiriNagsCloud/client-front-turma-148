@@ -1,2 +1,2 @@
 # front-vite-conectando-backend
-conectando o backend (API própria "localhost"), no frontend
+Fazendo a conexão backend (API'localhost'), e no front-end
