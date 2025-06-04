@@ -23,5 +23,5 @@
     transform: scale(1.02);
     cursor: pointer;
     border: 2px solid var(--light);
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
 }

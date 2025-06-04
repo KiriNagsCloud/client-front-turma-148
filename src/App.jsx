@@ -2,7 +2,7 @@ import style from './App.module.css'
 import { api } from './api/api'
 import { useNavigate } from 'react-router'
 import { useState, useEffect } from 'react';
-
+import Contact from './contact';
 import Icon from './assets/icons8-circled-right.gif'
 import IconLogin from './assets/icons8-crachá.gif'
 
@@ -39,34 +39,31 @@ function App() {
     }
   }
 
+   const handleContactClick = () => {
+    navigate('/contact')
+  }
+
   return (
     <div className={style.wrapLogin}>
 
-      <div className={style.wrapImg}>
+      <div className={style.wrapLog}>
         <div className={style.degrade}></div>
       </div>
-      <div className={style.wrapForm}>
-        <form onSubmit={handleLogin}>
-          <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-          <img className={style.iconLogin} src={IconLogin} alt="Icone arrow" />
-          <h2>Login</h2>
-          </div>
-          <div style={{position: "relative", width: "100%"}}>
-            <img className={style.icon} src={Icon} alt="Icone arrow" />
-            <input type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required />
-          </div>
-          <div style={{position: "relative", width: "100%"}}>
-            <img className={style.icon} src={Icon} alt="Icone arrow" />
-            <input type="password" placeholder='Senha' value={password} onChange={(e) => setPassword(e.target.value)} required />
-          </div>
-          <button type='submit'>Entrar</button>
-          <p className={style.userCad}>Entre em contato</p>
+        <div className={style.wrapForm}>
+          <form onSubmit={handleLogin}>
+            <h2>Login</h2>
+            <input type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
+            <input type="password" placeholder='Senha' value={password} onChange={(e) => setPassword(e.target.value)} required/>
+          <button type="submit">entrar</button>
           <p>{message}</p>
-        </form>
-      </div>
-
+            <div className={style.wrapContact}>
+              <button onClick={handleContactClick}>Entrar em Contato</button>
+            </div>
+          </form>
+        </div>
     </div>
   )
 }
+
 
 export default App
